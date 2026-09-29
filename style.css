@@ -1,11 +1,294 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
-    background-color: #f0f2f5;
-    color: #333;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-    color: #d84a0c;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #2b1d17;
+    background: #fffaf5;
+    line-height: 1.6;
+}
+
+/* Navbar */
+
+header {
+    background: #fffaf5;
+    border-bottom: 1px solid #eadfd6;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #c47a44;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2b1d17;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #c47a44;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.primary {
+    background: #7b4b2a;
+    color: white;
+}
+
+.secondary {
+    color: #7b4b2a;
+    border: 1px solid #7b4b2a;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* Hero */
+
+.hero {
+    max-width: 1200px;
+    min-height: 600px;
+    margin: auto;
+    padding: 80px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.subtitle {
+    color: #c47a44;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 80px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #c47a44;
+}
+
+.description {
+    max-width: 550px;
+    font-size: 18px;
+    color: #6d5b51;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Coffee Card */
+
+.coffee-card {
+    width: 330px;
+    height: 330px;
+    flex-shrink: 0;
+
+    background: linear-gradient(145deg, #8b5936, #4a2919);
+    color: white;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 20px 50px rgba(74, 41, 25, 0.25);
+}
+
+.coffee-icon {
+    font-size: 90px;
+    margin-bottom: 15px;
+}
+
+.coffee-card h2 {
+    font-size: 25px;
+}
+
+.coffee-card p {
+    color: #ead8c9;
+}
+
+/* About */
+
+.about {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 100px 30px;
+}
+
+.about h2,
+.menu h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.about > p:last-child {
+    color: #6d5b51;
+}
+
+/* Menu */
+
+.menu {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 30px 120px;
+    text-align: center;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.menu-item {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    border: 1px solid #eadfd6;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(50, 30, 20, 0.1);
+}
+
+.item-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    color: #76665c;
+    margin-bottom: 15px;
+}
+
+.menu-item strong {
+    color: #c47a44;
+    font-size: 20px;
+}
+
+/* Footer */
+
+footer {
+    background: #2b1d17;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+footer p {
+    color: #cdbdb2;
+    margin-top: 8px;
+}
+
+.copyright {
+    margin-top: 25px !important;
+    font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .coffee-card {
+        width: 260px;
+        height: 260px;
+    }
+
+    .coffee-icon {
+        font-size: 65px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
 }

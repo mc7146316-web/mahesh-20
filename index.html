@@ -2,12 +2,99 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AWS CodePipeline Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean & Brew</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>This site was deployed automatically using AWS CodePipeline.</p>
-    <p>Version 1.0</p>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Bean<span>&</span>Brew</div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#menu" class="btn">View Menu</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="subtitle">FRESHLY ROASTED • LOCALLY LOVED</p>
+
+                <h1>
+                    Your perfect cup
+                    <span>starts here.</span>
+                </h1>
+
+                <p class="description">
+                    Discover rich flavors, freshly roasted beans,
+                    and delicious treats made with love.
+                </p>
+
+                <div class="buttons">
+                    <a href="#menu" class="btn primary">Explore Menu</a>
+                    <a href="#about" class="btn secondary">Learn More</a>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <div class="coffee-icon">☕</div>
+                <h2>Fresh Coffee</h2>
+                <p>Roasted every morning</p>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <p class="subtitle">ABOUT US</p>
+            <h2>Made for coffee lovers.</h2>
+            <p>
+                At Bean & Brew, we believe great coffee brings people together.
+                Our beans are carefully selected and freshly roasted to create
+                a smooth and memorable experience.
+            </p>
+        </section>
+
+        <section id="menu" class="menu">
+            <p class="subtitle">OUR MENU</p>
+            <h2>Popular Picks</h2>
+
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-icon">☕</div>
+                    <h3>Classic Latte</h3>
+                    <p>Espresso with smooth steamed milk.</p>
+                    <strong>$4.50</strong>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-icon">🍵</div>
+                    <h3>Green Tea</h3>
+                    <p>Fresh and refreshing premium tea.</p>
+                    <strong>$3.50</strong>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-icon">🥐</div>
+                    <h3>Butter Croissant</h3>
+                    <p>Flaky, buttery and freshly baked.</p>
+                    <strong>$3.00</strong>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h2>Bean & Brew</h2>
+        <p>Good coffee. Good people. Good moments.</p>
+        <p class="copyright">© 2026 Bean & Brew</p>
+    </footer>
+
 </body>
 </html>
